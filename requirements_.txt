@@ -1,0 +1,6 @@
+django==5.1.7
+pymongo==3.11.4
+psycopg2-binary==2.9.10
+celery==5.4.0
+django-celery-beat==2.7.0
+django-allauth==65.5.0

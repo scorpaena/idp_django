@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup / Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkblue;
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+        .success {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+
+        {% for message in messages %}
+            <p class="{% if message.tags == 'error' %}error{% else %}success{% endif %}">
+                {{ message }}
+            </p>
+        {% endfor %}
+
+        <form id="signupForm" method="POST">
+            {% csrf_token %}
+<!--            <input type="text" name="username" placeholder="Username" required>-->
+<!--            <input type="email" name="email" placeholder="Email" required>-->
+<!--            <input type="password" name="password1" placeholder="Password" required>-->
+<!--            <input type="password" name="password2" placeholder="Confirm Password" required>-->
+            {{ form.as_p }}  {# Renders fields with labels and validation messages #}
+            <button type="submit">Signup</button>
+
+        </form>
+<!--        <div class="or-divider">OR</div>-->
+<!--        &lt;!&ndash; Google login button &ndash;&gt;-->
+<!--        <a href="{% provider_login_url 'google' method='oauth2' %}" class="social-button google-button">Sign up with Google</a>-->
+
+    </div>
+
+<!--    <script>-->
+<!--        document.getElementById("signupForm").addEventListener("submit", function(event) {-->
+<!--            const password1 = document.querySelector('input[name="password1"]').value;-->
+<!--            const password2 = document.querySelector('input[name="password2"]').value;-->
+<!--            if (password1 !== password2) {-->
+<!--                alert("Passwords do not match!");-->
+<!--                event.preventDefault();-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+</body>
+</html>
