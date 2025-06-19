@@ -8,5 +8,6 @@ djangorestframework==3.14.0
 requests==2.31.0
 django-allauth[socialaccount]
 PyJWT
+faker
 
 

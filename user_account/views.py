@@ -6,6 +6,7 @@ from user_account.forms import SignupForm
 from django.contrib.auth import login
 # from allauth.account.forms import LoginForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.conf import settings
 
 def signup_view(request):
     if request.method == "POST":
@@ -57,14 +58,14 @@ def signup_login_view(request):
                 user.set_password(signup_form.cleaned_data['password'])
                 user.save()
                 login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-                return redirect('/accounts/email/')
+                return redirect(settings.LOGIN_REDIRECT_URL)
             else:
                 messages.error(request, "Please correct the errors below.")
         elif 'login' in request.POST:
             login_form = AuthenticationForm(request, data=request.POST)
             if login_form.is_valid():
                 login(request, login_form.get_user(), backend='django.contrib.auth.backends.ModelBackend')
-                return redirect('/accounts/email/')
+                return redirect(settings.LOGIN_REDIRECT_URL)
             else:
                 messages.error(request, "Invalid username or password.")
 

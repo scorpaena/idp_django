@@ -1,0 +1,102 @@
+[
+  {
+    "model": "game.game",
+    "pk": 1,
+    "fields": {
+      "title": "Digitized cohesive policy",
+      "language": "Sardinian",
+      "category": "three",
+      "release_date": "2011-09-01"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 2,
+    "fields": {
+      "title": "Versatile impactful concept",
+      "language": "Wolof",
+      "category": "throw",
+      "release_date": "2010-03-03"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 3,
+    "fields": {
+      "title": "User-friendly even-keeled circuit",
+      "language": "Welsh",
+      "category": "last",
+      "release_date": "1979-05-18"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 4,
+    "fields": {
+      "title": "Adaptive logistical time-frame",
+      "language": "Sanskrit",
+      "category": "cell",
+      "release_date": "2000-02-20"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 5,
+    "fields": {
+      "title": "Compatible bottom-line installation",
+      "language": "Tswana",
+      "category": "score",
+      "release_date": "2011-01-23"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 6,
+    "fields": {
+      "title": "Object-based 3rdgeneration interface",
+      "language": "Polish",
+      "category": "computer",
+      "release_date": "2023-04-22"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 7,
+    "fields": {
+      "title": "Ameliorated well-modulated moderator",
+      "language": "Oromo",
+      "category": "indeed",
+      "release_date": "1981-03-12"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 8,
+    "fields": {
+      "title": "Phased zero administration Local Area Network",
+      "language": "Zhuang",
+      "category": "as",
+      "release_date": "2004-03-23"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 9,
+    "fields": {
+      "title": "Networked analyzing orchestration",
+      "language": "Wolof",
+      "category": "we",
+      "release_date": "1998-12-24"
+    }
+  },
+  {
+    "model": "game.game",
+    "pk": 10,
+    "fields": {
+      "title": "Configurable high-level structure",
+      "language": "Shona",
+      "category": "lawyer",
+      "release_date": "2008-03-15"
+    }
+  }
+]

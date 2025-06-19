@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 
 from celery.events.receiver import CLIENT_CLOCK_SKEW
+# from django.conf.global_settings import FIXTURE_DIRS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'user_account.User'
 
 # Application definition
 
@@ -40,12 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django.contrib.sites',
     'user_account',
+    'game',
+    'company',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'rest_framework',
 ]
 
 CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "your_google_client_id")
@@ -100,8 +104,6 @@ WSGI_APPLICATION = 'idp.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -115,16 +117,18 @@ DATABASES = {
         'HOST': os.getenv("DATABASE_URL", "postgres"),
         'PORT': '5432',
     },
-    'mongo': {
-        'ENGINE': 'djongo',
-        'NAME': 'my_mongo_db',
-        'CLIENT': {
-            'host': 'mongodb://mongo:27017/',
-            'username': '',
-            'password': '',
-        },
-    },
+    # 'mongo': {
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'my_mongo_db',
+    #     'CLIENT': {
+    #         'host': 'mongodb://mongo:27017/',
+    #         'username': '',
+    #         'password': '',
+    #     },
+    # },
 }
+# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
 
 CELERY_BROKER_URL=os.getenv("RABBITMQ_URL", "amqp://guest:guest@rabbitmq:5672/")
 CELERY_ACCEPT_CONTENT = ['json']
@@ -171,4 +175,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/accounts/email/'
+LOGIN_REDIRECT_URL = '/api/game/'
+
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'),]

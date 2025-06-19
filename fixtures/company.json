@@ -1,0 +1,52 @@
+[
+  {
+    "model": "company.company",
+    "pk": 1,
+    "fields": {
+      "name": "1_Banks PLC",
+      "address": "08687 Ponce River Suite 417\nScottland, RI 27952",
+      "phone_number": "001-317-430-7008x607",
+      "email": "roy95@example.org"
+    }
+  },
+  {
+    "model": "company.company",
+    "pk": 2,
+    "fields": {
+      "name": "2_Rice PLC",
+      "address": "PSC 5384, Box 6412\nAPO AP 67460",
+      "phone_number": "(468)923-4714x84489",
+      "email": "campbellpaula@example.com"
+    }
+  },
+  {
+    "model": "company.company",
+    "pk": 3,
+    "fields": {
+      "name": "3_Wright, Massey and Vasquez",
+      "address": "49352 Gray Roads\nNorth Kayla, SC 43938",
+      "phone_number": "758.590.5659",
+      "email": "uwise@example.org"
+    }
+  },
+  {
+    "model": "company.company",
+    "pk": 4,
+    "fields": {
+      "name": "4_Davis PLC",
+      "address": "81277 Hernandez Station Apt. 673\nEast Amy, NE 47135",
+      "phone_number": "568-922-1664",
+      "email": "vazquezlinda@example.org"
+    }
+  },
+  {
+    "model": "company.company",
+    "pk": 5,
+    "fields": {
+      "name": "5_Butler, Gomez and Woods",
+      "address": "21491 Kim Heights\nAmandaland, DE 59861",
+      "phone_number": "(643)375-7671x4456",
+      "email": "sarah58@example.org"
+    }
+  }
+]
