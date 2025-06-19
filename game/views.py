@@ -12,9 +12,9 @@ class GameSessionViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        queryset = super().get_queryset().select_related('game')
+        queryset = super().get_queryset().select_related('game', 'user')
         if user.role == 'companyadmin':
-            return queryset.filter(game__company=user.company)
+            return queryset.filter(user__company=user.company)
         elif user.role == 'participant':
             return queryset.filter(user=user)
         return queryset

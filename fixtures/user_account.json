@@ -3,39 +3,43 @@
     "model": "user_account.user",
     "pk": 1,
     "fields": {
-      "username": "amyreilly",
+      "username": "crogers",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "companyadmin",
-      "company": 1
+      "email": "druiz@example.com",
+      "role": "superadmin",
+      "company": 2
     }
   },
   {
     "model": "user_account.user",
     "pk": 2,
     "fields": {
-      "username": "richard85",
+      "username": "daniel25",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "participant",
-      "company": 5
-    }
-  },
-  {
-    "model": "user_account.user",
-    "pk": 3,
-    "fields": {
-      "username": "shannonarnold",
-      "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
+      "email": "jhess@example.net",
       "role": "companyadmin",
       "company": 3
     }
   },
   {
     "model": "user_account.user",
+    "pk": 3,
+    "fields": {
+      "username": "wlewis",
+      "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
+      "email": "amyjohnson@example.net",
+      "role": "participant",
+      "company": 5
+    }
+  },
+  {
+    "model": "user_account.user",
     "pk": 4,
     "fields": {
-      "username": "whitney21",
+      "username": "ryan58",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "participant",
+      "email": "kenneth29@example.net",
+      "role": "superadmin",
       "company": 2
     }
   },
@@ -43,19 +47,21 @@
     "model": "user_account.user",
     "pk": 5,
     "fields": {
-      "username": "boyersteven",
+      "username": "rhonda71",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "superadmin",
-      "company": 2
+      "email": "handerson@example.net",
+      "role": "companyadmin",
+      "company": 5
     }
   },
   {
     "model": "user_account.user",
     "pk": 6,
     "fields": {
-      "username": "greencatherine",
+      "username": "oscarwright",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "companyadmin",
+      "email": "wrightvanessa@example.org",
+      "role": "superadmin",
       "company": 2
     }
   },
@@ -63,40 +69,44 @@
     "model": "user_account.user",
     "pk": 7,
     "fields": {
-      "username": "jessicarose",
+      "username": "johnkirk",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "companyadmin",
-      "company": 4
+      "email": "kendra59@example.net",
+      "role": "superadmin",
+      "company": 1
     }
   },
   {
     "model": "user_account.user",
     "pk": 8,
     "fields": {
-      "username": "brandy57",
+      "username": "qfox",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "companyadmin",
-      "company": 2
+      "email": "smithlauren@example.com",
+      "role": "participant",
+      "company": 5
     }
   },
   {
     "model": "user_account.user",
     "pk": 9,
     "fields": {
-      "username": "jefferyrose",
+      "username": "jeffrey47",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
-      "role": "superadmin",
-      "company": 4
+      "email": "jennaanderson@example.com",
+      "role": "participant",
+      "company": 5
     }
   },
   {
     "model": "user_account.user",
     "pk": 10,
     "fields": {
-      "username": "krausecharlene",
+      "username": "joseph27",
       "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=",
+      "email": "jennifer53@example.net",
       "role": "participant",
-      "company": 1
+      "company": 2
     }
   }
 ]

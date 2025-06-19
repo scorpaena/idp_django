@@ -39,6 +39,7 @@ class Command(BaseCommand):
                     "fields": {
                         "username": fake.user_name(),
                         "password": "pbkdf2_sha256$870000$COi1GsJL9JJTeQQwqYE52f$cA3mlQEI7oZvgzBEPpTm9euYkydMcezqq8s55F2pMsc=", # 123
+                        "email": fake.email(),
                         "role": random.choice(roles),
                         "company": random.choice(companies)
                     }
