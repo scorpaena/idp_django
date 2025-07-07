@@ -1,4 +1,4 @@
-<!-- templates/signup.html -->
+<!-- templates/login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     {% load socialaccount %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/auth.css' %}">
 </head>
 <body>
@@ -18,20 +18,23 @@
             <button type="submit" class="logout-btn">Logout</button>
         </form>
     {% else %}
-        <h2>Signup</h2>
+        <h2>Login</h2>
         {% for message in messages %}
             <p class="{% if message.tags == 'error' %}error{% else %}success{% endif %}">{{ message }}</p>
         {% endfor %}
         <form method="post">
             {% csrf_token %}
-            {{ signup_form.as_p }}
-            <button type="submit">Signup</button>
+            {{ login_form.as_p }}
+            <button type="submit">Login</button>
+            <button type="button" class="social-btn" onclick="window.location.href='{% provider_login_url 'google' %}'">
+                Login with Google
+            </button>
         </form>
-        <button class="toggle" onclick="switchTo(loginUrl)">Already have an account? Login here</button>
+        <button class="toggle" onclick="switchTo(signupUrl)">Don't have an account? Signup here</button>
     {% endif %}
 </div>
 <script>
-    const loginUrl = "{% url 'login' %}";
+    const signupUrl = "{% url 'signup' %}";
 </script>
 <script src="{% static 'js/auth_toggle.js' %}"></script>
 </body>

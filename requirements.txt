@@ -9,5 +9,4 @@ requests==2.31.0
 django-allauth[socialaccount]
 PyJWT
 faker
-
-
+drf-spectacular

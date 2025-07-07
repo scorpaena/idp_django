@@ -8,7 +8,7 @@ class Game(models.Model):
     release_date = models.DateField()
 
     def __str__(self):
-        return self.title
+        return f"{self.id} - {self.title}"
 
 
 class GameSession(models.Model):
@@ -24,7 +24,7 @@ class GameSession(models.Model):
     session_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} - {self.game.title} ({self.session_date})"
+        return f"{self.id} - {self.user.username} - {self.game.title} ({self.session_date})"
 
 
 class GameResult(models.Model):
